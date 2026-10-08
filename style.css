@@ -1,0 +1,442 @@
+/* ================= GENERAL ================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+    color: #111827;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logo img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.logo span {
+    color: #111827;
+}
+
+.logo .logo-dot {
+    color: #3155c7;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar a {
+    color: #111827;
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #3155c7;
+}
+
+
+/* ================= EXPLORE BUTTON ================= */
+
+.explore-btn {
+    background-color: #3155c7;
+    color: white;
+
+    padding: 9px 16px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #2444ad;
+    transform: translateY(-2px);
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    background-color: #e0f2fe;
+    padding: 80px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.small-title {
+    color: #0284c7;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+.hero-text > p:not(.small-title) {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #0284c7;
+    color: white;
+
+    padding: 13px 24px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #0369a1;
+    transform: translateY(-2px);
+}
+
+.hero-image img {
+    height: 380px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+
+/* ================= COURSES ================= */
+
+.courses-section {
+    padding: 80px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2,
+.about-section h2 {
+    font-size: 2.2rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* ================= COURSE CARD ================= */
+
+.course-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+
+    transition: transform 0.3s,
+                box-shadow 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+}
+
+.course-card > img {
+    height: 210px;
+    object-fit: cover;
+}
+
+.course-content {
+    padding: 25px;
+}
+
+.category {
+    display: inline-block;
+
+    color: #0284c7;
+    background-color: #e0f2fe;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.course-content h3 {
+    font-size: 1.4rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.course-content > p {
+    margin-bottom: 20px;
+    color: #64748b;
+}
+
+details {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+}
+
+summary {
+    cursor: pointer;
+    color: #0284c7;
+    font-weight: bold;
+}
+
+.details-content {
+    margin-top: 15px;
+    color: #475569;
+    font-size: 0.9rem;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-section {
+    background-color: #f1f5f9;
+    padding: 80px 0;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    padding-top: 50px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer a {
+    display: block;
+    margin-bottom: 8px;
+
+    transition: 0.3s;
+}
+
+.footer a:hover {
+    color: #38bdf8;
+}
+
+.copyright {
+    text-align: center;
+
+    border-top: 1px solid #334155;
+
+    padding: 20px;
+
+    font-size: 0.9rem;
+}
+
+
+/* ================= KEYBOARD ACCESSIBILITY ================= */
+
+a:focus,
+summary:focus {
+    outline: 3px solid #facc15;
+    outline-offset: 4px;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text > p:not(.small-title) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ================= PHONE ================= */
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .explore-btn {
+        padding: 8px 14px;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-image img {
+        height: 280px;
+    }
+
+    .courses-section,
+    .about-section {
+        padding: 55px 0;
+    }
+
+    .section-heading h2,
+    .about-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}  
